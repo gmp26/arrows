@@ -51,7 +51,7 @@ arrows.core=>
 
 To print a solution to the problem, use:
 ```
-(find-route [[3 0] [3 0]] [[0 3] [0 3]])
+(find-route [[0 0] [0 0]] [[3 3] [3 3]])
 ```
 
 You can change the puzzle by redefining grid.
