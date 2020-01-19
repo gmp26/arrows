@@ -12,7 +12,6 @@
     [:sw :nw :s :n]
     [:ne :e :s :se]]])
 
-
 (def arrow
   "Convert compass points to movements using this table (used in move-under).
   [0 0] is North West corner. [3 3] is South East corner"
@@ -144,11 +143,6 @@
   ; redefine grids to 2 x 2
   (def grid [[[:s :n] [:e :w]]
              [[:s :n] [:e :w]]])
-
-  ; it's important to redefine grid bounds too
-  (defn on-grid? [[x y]]
-    (let [max-grid-index (dec (count (get-in grid [0 0])))]
-      (and (<= 0 x max-grid-index) (<= 0 y max-grid-index))))
 
   ; Try these...
   (find-route [[0 0] [0 0]] [[1 1] [1 1]])
